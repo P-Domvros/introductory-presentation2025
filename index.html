@@ -24,12 +24,12 @@
         main { flex: 1 0 auto; }
         header {
             background-color: #F5F5DC; /* Beige */
-            padding: 16px; /* Reduced padding */
+            padding: 16px; 
             text-align: center;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
             border-bottom: 3px solid #DAA520; /* Brighter Gold */
         }
-        header img {
+        .header-logo-top {
             width: 80px;
             height: auto;
             display: block;
@@ -38,24 +38,31 @@
         .main-header-title {
             font-size: 1.6em;
             color: #800020; /* Burgundy */
-            margin: 0 0 5px 0; /* Reduced margin */
+            margin: 0 0 5px 0; 
             font-weight: 700;
         }
         .sub-header-title {
             color: #9A2A2A; /* Darker Red/Burgundy shade */
             font-weight: bold;
             font-size: 1.3em;
-            margin-bottom: 8px; /* Reduced margin */
+            margin-bottom: 15px; /* Added more space below */
+        }
+        .header-details-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Allows items to stack on small screens */
+            margin-top: 10px;
         }
         .school-info {
             display: inline-block;
             text-align: left;
             line-height: 1.5;
-            font-size: 1.1em; /* Increased font size */
-            margin-top: 5px; /* Reduced margin */
+            font-size: 1.1em;
         }
         .school-info p {
-            margin: 6px 0; /* Reduced margin */
+            margin: 6px 0;
         }
         .school-info strong {
             display: inline-block;
@@ -71,6 +78,14 @@
         .school-info a:hover {
             color: #DAA520; /* Brighter Gold */
             text-decoration: underline;
+        }
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            border: 4px solid #DAA520; /* Bright Gold Frame */
+            padding: 4px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .collapsible {
             background-color: #E6D8B9; /* Darker Beige/Light Gold */
@@ -108,7 +123,7 @@
             width: 90%;
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
             color: #3D2B1F;
-            font-size: 1.1em; /* Increased font size */
+            font-size: 1.1em;
             line-height: 1.6;
         }
         .content.open {
@@ -165,15 +180,18 @@
 <body>
 <main>
     <header>
-        <img src="Greek coat of arms.png" alt="Εθνόσημο">
+        <img src="Greek coat of arms.png" alt="Εθνόσημο" class="header-logo-top">
         <h1 class="main-header-title">1ο Ημερήσιο Γυμνάσιο Πυλαίας Θεσσαλονίκης</h1>
         <h2 class="sub-header-title">Εισαγωγική Ενημέρωση Γονέων και Κηδεμόνων (Σεπτέμβριος 2025)</h2>
-        <div class="school-info">
-            <p><strong>Διεύθυνση:</strong> Ισμήνης 4, Πυλαία Θεσσαλονίκης - 55535</p>
-            <p><strong>Διευθυντής:</strong> Παναγιώτης Δόμβρος</p>
-            <p><strong>Email:</strong> <a href="mailto:mail@1gym-pylaias.thess.sch.gr">mail@1gym-pylaias.thess.sch.gr</a></p>
-            <p><strong>Τηλέφωνο:</strong> 2310322232</p>
-            <p><strong>Ιστοσελίδα:</strong> <a href="https://1gym-pylaias.thess.sch.gr/" target="_blank">https://1gym-pylaias.thess.sch.gr/</a></p>
+        <div class="header-details-container">
+            <div class="school-info">
+                <p><strong>Διεύθυνση:</strong> Ισμήνης 4, Πυλαία Θεσσαλονίκης - 55535</p>
+                <p><strong>Διευθυντής:</strong> Παναγιώτης Δόμβρος</p>
+                <p><strong>Email:</strong> <a href="mailto:mail@1gym-pylaias.thess.sch.gr">mail@1gym-pylaias.thess.sch.gr</a></p>
+                <p><strong>Τηλέφωνο:</strong> 2310322232</p>
+                <p><strong>Ιστοσελίδα:</strong> <a href="https://1gym-pylaias.thess.sch.gr/" target="_blank">https://1gym-pylaias.thess.sch.gr/</a></p>
+            </div>
+            <img src="qr.png" alt="QR Code για περισσότερες πληροφορίες" class="qr-code">
         </div>
     </header>
 
@@ -383,7 +401,7 @@
             <li><strong>Φυσικοί, Χημικοί, Βιολόγοι, Γεωλόγοι:</strong> Αραπίδου Μαγδαληνή (Φυσικός), Καλίτση Αικατερίνη (Γεωλόγος – Γεωγραφία, Φυσική), Στίγγας Στυλιανός (Χημικός Μηχανικός), Συροπούλου Έλενα (Βιολόγος – Βιολογία, Χημεία), Τυφλοπούλου Άννα (Χημικός – Ειδικής Αγωγής)</li>
             <li><strong>Αγγλικής Φιλολογίας:</strong> Βασιλικού Φανή, Δημηνά Λεμονιά (Ιστορία – Αγγλικά), Δόμβρος Παναγιώτης (Ιστορία – Αγγλικά)</li>
             <li><strong>Γαλλικής Φιλολογίας:</strong> Αμανατιάδου Ελένη (σε άδεια)</li>
-            <li><strong>Γερμανικής Φιλολογίας:</strong> Κάλφα Μαρία, Ιωαννίδου Δέσποινα, Καζαντζίδου Ευανθία, Πατκού Ευδοξία</li>
+            <li><strong>Γερμανικής Φιλολογίας:</strong> Κάλφα Μαρία, Ιωαννίδou Δέσποινα, Καζαντζίδου Ευανθία, Πατκού Ευδοξία</li>
             <li><strong>Τεχνολογίας:</strong> Στίγγας Στυλιανός, Τσουκαλά Γαβριέλα</li>
             <li><strong>Φυσικής Αγωγής:</strong> Μπογιάτζη Ευδοκία, Ταμπουράτζης Σταύρος</li>
             <li><strong>Οικονομίας:</strong> Πέρτσης Αναστάσιος (ΚΠΑ – Οικονομικά)</li>
@@ -392,7 +410,7 @@
             <li><strong>Καλλιτεχνικών:</strong> Παρασίδου Μαρία</li>
             <li><strong>Σχολική Νοσηλεύτρια:</strong> Μαρμαγγέλου Θεοδώρα (από κοινού με το 1ο ΓΕΛ Πυλαίας)</li>
             <li><strong>Μέλη 27ου ΣΔΕΥ:</strong> Σγούρη Μαρία (Ψυχολόγος), Χατζηκεβορκιάν Ελισάβετ (Κοινωνική Λειτουργός)</li>
-            <li><strong>Υπεύθυνη Γραμματείας:</strong> Μπιάλα Καλλιόπη</li>
+            <li><strong>Υπεύθυνη Γραμματείας:</strong> Μπγιάλα Καλλιόπη (ΠΕ02 - Φιλόλογος)</li>
         </ul>
     </div>
 
@@ -418,7 +436,7 @@
         <ul>
             <li>Γ1 → Μανδραλή Ειρήνη</li>
             <li>Γ2 → Κοκκίνη Ελένη</li>
-            <li>Γ3 → Πέρτσης Αναστάσιος</li>
+            <li>Γ3 → Πέρτσης Αναστάσios</li>
             <li>Γ4 → Στίγγας Στυλιανός</li>
             <li>Γ5 → Αμοιραδάκη Αναστασία</li>
         </ul>
